@@ -1,0 +1,191 @@
+{
+    "LoadOnInit": {
+        "OnStart": [
+            "MainTitle"
+        ],
+        "Scenes" : [
+            "Map", "Backpack", "LittleTool"
+        ]
+        
+    },
+    "Items": {
+        "BaseballBat_Golden": {
+            "Info": "一支黃澄澄但沈甸甸的球棒。別說拿來打棒球，光是帶著它就讓你很想死了。"
+        }
+    },
+
+    "Scenes": {
+        "Library": {
+            "Name": "Library",
+            "ImagePath": "img/1.jpg",
+            "Buttons": {
+                "Save": {
+                    "Save2": {
+                        "ImagePath" : "img/return.jpg",
+                        "rect" : [100, 100, 100, 100],
+                        "FilePath" : ".save/save1.json"
+                    }
+                }
+            },
+            "DialogBoxes": {
+                "test": {
+                    "Name": "test",
+                    "SpokenBy": "躲貓貓社長",
+                    "ImagePath": "img/dialogbox.jpg",
+                    "Sentences": [
+                        "test1",
+                        "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+                        "Backpack is not ready yet!!"
+                    ],
+                    "Result": {
+                        "Next": "test2",
+                        "Give": "",
+                        "Puzzle": ""
+                    }
+                },
+                "test2": {
+                    "Name": "test2",
+                    "SpokenBy": "湖中女神",
+                    "ImagePath": "img/dialogbox.jpg",
+                    "Sentences": [
+                        "test2",
+                        "你掉的是金色的球棒，銀色的球棒，還是木頭做的球棒呢？"
+                    ],
+                    "Result": {
+                        "Next": "test3",
+                        "Give": "fragment4",
+                        "Puzzle": ""
+                    }
+                },
+                "test3": {
+                    "Name": "test3",
+                    "SpokenBy": "魔鏡",
+                    "ImagePath": "img/dialogbox.jpg",
+                    "Sentences": [
+                        "test3",
+                        "（魔鏡，魔鏡，誰是世界上最醜陋的人？）",
+                        "（鏡中浮現出你的樣貌。）"
+                    ],
+                    "Result": {
+                        "Next": "",
+                        "Give": "",
+                        "Puzzle": ""
+                    }
+                }
+
+            }
+        },
+
+        "MainTitle": {
+            "Name": "MainTitle",
+            "ImagePath": "img/1.jpg",
+            "Buttons": {
+                "Load": {
+                    "Load1": {
+                        "ImagePath" : "img/map.jpg",
+                        "rect" : [0, 100, 100, 100],
+                        "FilePath" : ".save/save1.json"
+                    }
+                }
+                
+            }
+        },
+
+        "LittleTool": {
+            "Name": "LittleTool",
+            "ImagePath": "img/transparent.png",
+
+            "Buttons": {
+                "Open" : {
+                    "MapButton": {
+                        "ImagePath" : "img/map.jpg",
+                        "rect" : [0, 0, 100, 100],
+                        "OpenScene" : "Map",
+                        "DeactivateBelow": true
+                    },
+                    
+                    "BackpackButton": {
+                        "ImagePath" : "img/backpack.jpg",
+                        "rect" : [100, 0, 100, 100],
+                        "OpenScene" : "Backpack",
+                        "DeactivateBelow": true
+                    }
+                    
+                },
+                "SceneChange" : {
+                    "MenuButton": {
+                        "ImagePath" : "img/menu.jpg",
+                        "rect" : [200, 0, 100, 100],
+                        "dest" : "Map2"
+                    }
+                }
+            }
+        },
+        
+        "Map": {
+            "Name": "Map",
+            "ImagePath": "img/1.jpg",
+
+            "Buttons": {
+                "Close" : {
+                    "Return": {
+                        "ImagePath" : "img/return.jpg",
+                        "rect" : [0, 650 , 100, 100],
+                        "ActivateAll" : true
+                    }
+                }
+            }
+        },
+
+        "Map2": {
+            "Name": "Map2",
+            "ImagePath": "img/2.jpg",
+
+            "Buttons": {
+                "SceneChange" : {
+                    "Return": {
+                        "ImagePath" : "img/return.jpg",
+                        "rect" : [0, 650 , 100, 100],
+                        "dest" : "Library"
+                    }
+                },
+                "Save": {
+                    "Save1": {
+                        "ImagePath" : "img/return.jpg",
+                        "rect" : [100, 100, 100, 100],
+                        "FilePath" : ".save/save1.json"
+                    }
+                }
+            }
+        },
+
+        "Backpack": {
+            "Name": "Backpack",
+            "Type": "Backpack",
+            "ImagePath": "img/2.jpg",
+            "DialogImage": "img/dialogbox.jpg",
+
+            "Buttons": {
+                "Close" : {
+                    "Return": {
+                        "ImagePath" : "img/General/return.jpg",
+                        "rect" : [0, 650, 100, 100],
+                        "ActivateAll" : true
+                    }
+                },
+                "PageTurn" : {
+                    "NextPage": {
+                        "ImagePath" : "img/General/left.png",
+                        "rect" : [0, 325, 100, 100],
+                        "Jump": -1
+                    },
+                    "PrevPage": {
+                        "ImagePath" : "img/General/right.png",
+                        "rect" : [1100, 325, 100, 100],
+                        "Jump": 1
+                    }
+                }
+            }
+        }
+    }
+}

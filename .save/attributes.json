@@ -1,0 +1,310 @@
+{
+    "LoadOnInit": {
+        "OnStart": [
+            "Library", "LittleTool"
+        ],
+        "Scenes" : [
+            "ClockTower", "LibraryLawn"
+        ]
+        
+    },
+
+    "Scenes": {
+        "LittleTool": {
+            "Name": "LittleTool",
+            "ImagePath": "img/General/transparent.png",
+
+            "Buttons":{
+                "SceneChange":{
+                    "MenuButton":{
+                        "ImagePath" : "img/LittleTool/menu.png",
+                        "rect" : [10, 0, 100, 100],
+                        "dest" : "Map"
+                    },
+                    "MapButton":{
+                        "ImagePath" : "img/LittleTool/map.png",
+                        "rect" : [115, 0, 100, 100],
+                        "dest" : "Map"
+                    }
+                },
+                "Open":{
+                    "Backpack":{
+                        "ImagePath" : "img/LittleTool/backpack.png",
+                        "rect" : [220, 0, 100, 100],
+                        "OpenScene" : "Backpack",
+                        "DeactivateBelow": true
+                    }
+                }
+            }
+        },
+        "Backpack": {
+            "Name": "Backpack",
+            "Type": "Backpack",
+            "ImagePath": "img/Backpack/backpack.png",
+            "DialogImage": "img/General/transparent.png",
+
+            "Buttons": {
+                "Close" : {
+                    "Return": {
+                        "ImagePath" : "img/General/return.png",
+                        "rect" : [0, 650, 100, 100],
+                        "ActivateAll" : true
+                    }
+                },
+                "PageTurn" : {
+                    "NextPage": {
+                        "ImagePath" : "img/General/left.png",
+                        "rect" : [0, 325, 100, 100],
+                        "Jump": -1
+                    },
+                    "PrevPage": {
+                        "ImagePath" : "img/General/right.png",
+                        "rect" : [1100, 325, 100, 100],
+                        "Jump": 1
+                    }
+                }
+            }
+        },
+        "Map":{
+            "Name": "Map",
+            "ImagePath": "img/Map/Map.png",
+
+            "Buttons":{
+                "SceneChange":{
+                    "LibraryButton":{
+                        "ImagePath" : "img/Map/01.png",
+                        "rect" : [784, 386, 80, 94],
+                        "dest" : "Library"
+                    },
+                    "BuoliButton":{
+                        "ImagePath" : "img/Map/04.png",
+                        "rect" : [916, 265, 55, 22],
+                        "dest" : "Buoli"
+                    },
+                    "LakeButton":{
+                        "ImagePath" : "img/Map/03.png",
+                        "rect" : [463, 128, 92, 97],
+                        "dest" : "Lake"
+                    },
+                    "GateButton":{
+                        "ImagePath" : "img/Map/02.png",
+                        "rect" : [170, 442, 46, 44],
+                        "dest" : "Gate"
+                    },
+                    "LumingButton":{
+                        "ImagePath" : "img/Map/05.png",
+                        "rect" : [477, 634, 64, 37],
+                        "dest" : "LuMing"
+                    },
+                    "BellButton":{
+                        "ImagePath" : "img/Map/06.png",
+                        "rect" : [409, 464, 45, 39],
+                        "dest" : "Bell"
+                    }
+                }
+            }
+        },
+
+        "Library": {
+            "Name": "Library",
+            "ImagePath": "img/Library/Library.png",
+            "Buttons": {
+                "SceneChange" : {
+                    "ClockTowerButton": {
+                        "ImagePath" : "img/General/left.png",
+                        "rect" : [0, 325, 100, 100],
+                        "dest" : "ClockTower"
+                    },
+                    "LibraryLawnButton": {
+                        "ImagePath" : "img/General/right.png",
+                        "rect" : [1100, 325, 100, 100],
+                        "dest" : "LibraryLawn"
+                    }
+                }
+            }
+        },
+        "ClockTower": {
+            "Name": "ClockTower",
+            "ImagePath" : "img/Library/ClockTower.png",
+
+            "Buttons" : {
+                "SceneChange" : {
+                    "LibraryButton" : {
+                        "ImagePath" : "img/General/right.png",
+                        "rect" : [1100, 325, 100, 100],
+                        "dest" : "Library"
+                    }
+                }
+            }
+        },
+        "LibraryLawn": {
+            "Name": "LibraryLawn",
+            "ImagePath" : "img/Library/LibraryLawn.png",
+
+            "Buttons" : {
+                "SceneChange" : {
+                    "LibraryButton": {
+                        "ImagePath" : "img/General/left.png",
+                        "rect" : [0, 325, 100, 100],
+                        "dest" : "Library"
+                    }
+                }
+            }
+        },
+        "Lake": {
+            "Name": "Lake",
+            "ImagePath" : "img/Lake/Lake.png",
+            "Buttons" : {
+                "SceneChange":{
+                    "ZoomIn": {
+                        "ImagePath" : "img/General/down.png",
+                        "rect" : [600, 650, 100, 100],
+                        "dest" : "ZoomLake"
+                    }
+                }
+            },
+            "DialogBoxes": {
+                "ChestDialog1": {
+                    "Name": "chest",
+                    "SpokenBy": "寶箱",
+                    "ImagePath": "img/General/dialogbox.jpg",
+                    "Sentences": [
+                        "到底是什麼年代了？還有寶箱！？",
+                        "我來打開看看！！",
+                        "三小？有碎片ㄟ！"
+                    ],
+                    "Result": {
+                        "Next": "ChestDialog2",
+                        "Give": "Frag4",
+                        "Puzzle": ""
+                    }
+                },
+                "ChestDialog2": {
+                    "Name": "chest",
+                    "SpokenBy": "寶箱",
+                    "ImagePath": "img/General/dialogbox.jpg",
+                    "Sentences": [
+                        "寶箱裡面沒東西了啦！還拿！"
+                    ],
+                    "Result": {
+                        "Next": "",
+                        "Give": "",
+                        "Puzzle": ""
+                    }
+                },
+                "GoddessDialog1":{
+                    "Name": "Goddess",
+                    "SpokenBy": "湖中女神",
+                    "ImagePath": "img/General/dialogbox.jpg",
+                    "Sentences": [
+                        "請問你要金球棒、鋁球棒、還是木球棒呢？",
+                        "我要金球棒！！",
+                        "你這貪心的小鬼，你以為我會給你球棒嗎？蛤？...",
+                        "（你開始裝可憐）",
+                        "好啦...看在我宅心仁厚的份上，這跟金球棒就給你吧！好好利用他吧，年輕人"
+                    ],
+                    "Result": {
+                        "Next": "GoddessDialog2",
+                        "Give": "Bat_Au",
+                        "Puzzle": ""
+                    }
+                },
+                "GoddessDialog2":{
+                    "Name": "Goddess",
+                    "SpokenBy": "湖中女神",
+                    "ImagePath": "img/General/dialogbox.jpg",
+                    "Sentences": [
+                        "搗蛋鬼，別搗蛋！"
+                    ],
+                    "Result": {
+                        "Next": "GoddessDialog3",
+                        "Give": "",
+                        "Puzzle": ""
+                    }
+                },
+                "GoddessDialog3":{
+                    "Name": "Goddess",
+                    "SpokenBy": "湖中女神",
+                    "ImagePath": "img/General/dialogbox.jpg",
+                    "Sentences": [
+                        "搗蛋鬼...別搗蛋！..."
+                    ],
+                    "Result": {
+                        "Next": "GoddessDialog4",
+                        "Give": "",
+                        "Puzzle": ""
+                    }
+                },
+                "GoddessDialog4":{
+                    "Name": "Goddess",
+                    "SpokenBy": "湖中女神",
+                    "ImagePath": "img/General/dialogbox.jpg",
+                    "Sentences": [
+                        "搗蛋鬼！！！別　搗　蛋！！！"
+                    ],
+                    "Result": {
+                        "Next": "",
+                        "Give": "",
+                        "Puzzle": ""
+                    }
+                }
+
+            }
+        },
+        "ZoomLake":{
+            "Name": "ZoomLake",
+            "ImagePath" : "img/Lake/ZoomLake.png",
+            "Buttons" : {
+                "SceneChange" : {
+                    "ZoomOut":{
+                        "ImagePath" : "img/General/up.png",
+                        "rect" : [600, 0, 100, 100],
+                        "dest" : "Lake"
+                    }
+                }
+            }
+        },
+        "Buoli":{
+            "Name": "Buoli",
+            "ImagePath" : "img/BuoLi/BuoLi.png",
+            "Buttons" : {
+                "SceneChange" : {
+                    "Inside" : {
+                        "ImagePath" : "img/General/down.png",
+                        "rect" : [600, 650, 100, 100],
+                        "dest" : "XiK"
+                    }
+                }
+            }
+        },
+        "XiK":{
+            "Name": "XiK",
+            "ImagePath" : "img/BuoLi/XiK.png",
+            "Buttons" : {
+                "SceneChange" : {
+                    "Outside" : {
+                        "ImagePath" : "img/General/up.png",
+                        "rect" : [600, 0, 100, 100],
+                        "dest" : "Buoli"
+                    }
+                }
+            }
+        },
+        "Bell" : {
+            "Name": "Bell",
+            "ImagePath" : "img/Bell/Bell.png",
+            "Buttons" : {}
+        },
+        "Gate" : {
+            "Name": "Gate",
+            "ImagePath" : "img/Gate/Gate.png",
+            "Buttons" : {}
+        },
+        "LuMing" : {
+            "Name": "LuMing",
+            "ImagePath" : "img/LuMing/Luming.png",
+            "Buttons" : {}
+        }
+    }
+}
+

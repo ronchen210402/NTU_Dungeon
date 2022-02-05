@@ -1,0 +1,53 @@
+{
+    "LastScene": "Library",
+    "Scenes": {
+        "Backpack": {
+            "Buttons": {
+                "Item": {
+                    "Bottle": {
+                        "ImagePath": "img/Backpack/bottle.png",
+                        "Info": "空的牛奶瓶...",
+                        "taken": true
+                    },
+                    "Bat_Au": {
+                        "ImagePath": "img/Backpack/bat_Au.png",
+                        "Info": "金球棒　好棒棒",
+                        "taken": false
+                    },
+                    "Frag4": {
+                        "ImagePath": "img/Backpack/frag4.png",
+                        "Info": "碎片四",
+                        "taken": false
+                    }
+                }
+            }
+        },
+        "Library": {},
+        "LittleTool": {},
+        "Map": {},
+        "ClockTower": {},
+        "LibraryLawn": {},
+        "Lake": {
+            "Buttons": {
+                "Dialog": {
+                    "Chest": {
+                        "ImagePath" : "img/Lake/chest.png",
+                        "rect" : [200, 200, 100, 100],
+                        "DialogBox" : "ChestDialog1"
+                    },
+                    "Godess": {
+                        "ImagePath" : "img/Lake/godess.png",
+                        "rect" : [300, 200, 100, 100],
+                        "DialogBox" : "GoddessDialog1"
+                    }
+                }
+            }
+        },
+        "ZoomLake": {},
+        "Buoli": {},
+        "XiK": {},
+        "Bell": {},
+        "Gate": {},
+        "LuMing": {}
+    }
+}

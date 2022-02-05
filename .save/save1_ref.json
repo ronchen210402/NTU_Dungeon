@@ -1,0 +1,87 @@
+{
+    "LastScene": "Library",
+    "Scenes": {
+        "Backpack": {
+            "Buttons": {
+                "Item": {
+                    "fragment1": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第一塊碎片。一二三四五六七八九十一二三四五六七八九十",
+                        "taken": true
+                    },
+                    "fragment10": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第二塊碎片。",
+                        "taken": true
+                    },
+                    "fragment11": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第三塊碎片。",
+                        "taken": true
+                    },
+                    "fragment12": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第四塊碎片。",
+                        "taken": true
+                    },
+                    "fragment2": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第二塊碎片。",
+                        "taken": true
+                    },
+                    "fragment3": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第三塊碎片。",
+                        "taken": true
+                    },
+                    "fragment4": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第四塊碎片。",
+                        "taken": false
+                    },
+                    "fragment5": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第一塊碎片。",
+                        "taken": true
+                    },
+                    "fragment6": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第二塊碎片。",
+                        "taken": true
+                    },
+                    "fragment7": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第三塊碎片。",
+                        "taken": true
+                    },
+                    "fragment8": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第四塊碎片。",
+                        "taken": true
+                    },
+                    "fragment9": {
+                        "ImagePath": "img/bottle.png",
+                        "Info": "第一塊碎片。",
+                        "taken": true
+                    }
+                }
+            }
+        },
+        "Library": {
+            "Buttons": {
+                "Dialog": {
+                    "Dialog1": {
+                        "ImagePath" : "img/map.jpg",
+                        "rect" : [200, 100, 100, 100],
+                        "DialogBox" : "test"
+                    }
+                }
+            }
+        },
+        "LittleTool": {
+            "Buttons": {}
+        },
+        "Map": {},
+        "Map2": {}
+    }
+}
